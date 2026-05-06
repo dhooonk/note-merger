@@ -2,7 +2,7 @@
 
 > 여러 메모 파일을 하나로 합쳐주는 Python GUI 프로그램 — 확장자 무관, 30개 이상 동시 선택 가능
 
-[![버전](https://img.shields.io/badge/version-1.1.0-blue)](docs/Change/CHANGELOG.md)
+[![버전](https://img.shields.io/badge/version-1.2.0-blue)](docs/Change/CHANGELOG.md)
 [![라이선스](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
@@ -95,6 +95,18 @@ python3 main.py
 pytest tests/
 ```
 
+### Windows EXE 빌드
+
+PyInstaller로 단일 실행파일(`NoteMerger.exe`)을 생성합니다.
+
+```cmd
+build_exe.bat
+```
+
+- 빌드 결과: `dist\NoteMerger.exe`
+- 빌드 설정: [`note-merger.spec`](note-merger.spec) (단일 파일, windowed, 아이콘 포함)
+- 사전 요구사항: Python 3.8+ (PyInstaller는 스크립트가 자동 설치)
+
 ## 주요 기능
 
 - **메인 윈도우 GUI**: 파일 목록·버튼·상태 바를 갖춘 단일 창
@@ -115,6 +127,7 @@ pytest tests/
 
 | 버전 | 날짜 | 내용 |
 |---|---|---|
+| 1.2.0 | 2026-05-06 | PyInstaller 기반 Windows EXE 빌드 도입 (아이콘 적용, 단일 파일) |
 | 1.1.0 | 2026-04-28 | 메인 윈도우 GUI 추가 (파일 목록, 순서 변경, 상태 바) |
 | 1.0.0 | 2026-04-28 | 초기 구현 |
 
