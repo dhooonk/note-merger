@@ -8,3 +8,9 @@ dist/
 build/
 *.txt
 !requirements.txt
+
+# Documentation files (except README.md)
+*.md
+!README.md
+docs/
+INSTRUCTION.md
